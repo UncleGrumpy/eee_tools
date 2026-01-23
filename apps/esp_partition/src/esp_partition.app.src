@@ -1,0 +1,25 @@
+%% SPDX-FileCopyrightText: 2025 Winford (Uncle Grumpy) <winford@object.stream>
+%% SPDX-License-Identifier: Apache-2.0 OR LGPL-2.1-or-later
+
+{application, esp_partition, [
+    {description, "An ESP32 partition table generation tool and library"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib,
+        crypto,
+        eee_lib
+    ]},
+    {env, [
+        {quiet, false},
+        {md5sum, true},
+        {secure, none},
+        {offset_part_table, 16#8000}
+    ]},
+    {licenses, ["Apache-2.0", "LGPL-2.1-or-later"]},
+    {maintainers, ["Winford"]},
+    {links, [
+        {"GitHub", "https://github.com/UncleGrumpy/eee_tools/"}
+    ]}
+]}.
